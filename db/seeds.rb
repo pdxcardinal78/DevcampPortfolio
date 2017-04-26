@@ -1,3 +1,12 @@
+3.times do |topic|
+	Topic.create!(
+		title: "Topic #{topic}"
+		)
+
+end
+
+puts "3 topics create"
+
 10.times do |blog|     
 	Blog.create!(        
 		title: "My Blog Post #{blog}",
@@ -22,10 +31,10 @@ end
 
 puts ("5 skills created")
 
-9.times do |portfolio_item|     
+8.times do |portfolio_item|     
 	Portfolio.create!(         
 		title: "Portfoilo Title #{portfolio_item}",
-		subtitle: "My great service",
+		subtitle: "Ruby on Rails",
 		body: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
 		laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
 		reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
@@ -35,4 +44,25 @@ puts ("5 skills created")
 		) 
 end
 
-puts ("9 portfolio items created")
+puts ("8 portfolio items created")
+
+1.times do |portfolio_item|     
+	Portfolio.create!(         
+		title: "Portfoilo Title #{portfolio_item}",
+		subtitle: "Angular",
+		body: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+		laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+		reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+		vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+		main_image: "http://placehold.it/600x400",         
+		thumb_image: "http://placehold.it/350x250"         
+		) 
+end
+puts ("1 portfoilo item created")
+
+3.times do |technology|
+	Portfolio.last.technologies.create!(
+		name: "Technology #{technology}"
+		)
+end
+puts "3 technologies created"
