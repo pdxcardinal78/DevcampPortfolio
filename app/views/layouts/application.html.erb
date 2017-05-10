@@ -20,12 +20,14 @@
           <div class="cover-container">
 
              <%= render "shared/application_nav" %>
-
-              <%= login_helper %>
             
               <%= yield %>
+
+              <%= render "shared/application_footer" %>
               
               <%= source_helper %>
+
+
 
             </div>
         </div>
