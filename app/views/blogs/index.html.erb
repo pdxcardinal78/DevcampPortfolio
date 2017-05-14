@@ -3,11 +3,7 @@
 
           <%= render @blogs %>
 
-    <nav class="blog-pagination">
-    <a class="btn btn-outline-primary" href="#">Older</a>
-    <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-    </nav>
-    <p id="notice"><%= notice %></p>
+    	  <%= paginate @blogs, theme: 'twitter-bootstrap-4' %>
 
 </div>
 
