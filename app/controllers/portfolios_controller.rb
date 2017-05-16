@@ -5,7 +5,7 @@ class PortfoliosController < ApplicationController
 
 
 	def index
-		@portfolio_items = Portfolio.all
+		@portfolio_items = Portfolio.by_position
 	end
 
   def angular
@@ -66,7 +66,7 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title,
                                       :subtitle,
                                       :body,
-                                      technologies_attribute: [:name]
+                                      technologies_attributes: [:name]
                                       )
   end
 
