@@ -36,7 +36,7 @@ class PortfoliosController < ApplicationController
         format.html { redirect_to portfolios_path, notice: 'Your Portfolio was successfully created.' }
         else
         format.html { render :new }
-        end
+      end
     end
   end
 
@@ -54,7 +54,7 @@ class PortfoliosController < ApplicationController
 
   def edit
   	@portfolio_item = Portfolio.find(params[:id])
-  	end
+  end
 
   def update
   	@portfolio_item = Portfolio.find(params[:id])
@@ -63,7 +63,7 @@ class PortfoliosController < ApplicationController
 	        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
 	        else
 	        format.html { render :edit }
-	        end
+	      end
 	    end
   end
 
@@ -75,11 +75,12 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       :thumb_image,
                                       :main_image,
-                                      technologies_attributes: [:name]
+                                      technologies_attributes: [:name, :id, :_destroy]
                                       )
   end
 
   def set_portfolio_item
     @portfolio_item = Portfolio.find(params[:id])
   end
+
 end

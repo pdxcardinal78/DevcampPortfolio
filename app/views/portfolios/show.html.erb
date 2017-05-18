@@ -1,4 +1,4 @@
-<div class= "container">
+<div class= "container portfolio-form">
 	<div class= "row">
 		<div class = "col-md-7">
 			<%= image_tag portfolio_img(@portfolio_item.main_image, 'main') %>
@@ -12,6 +12,12 @@
 			<% @portfolio_item.technologies.each do |t| %>
 			<p><%= t.name %></p>
 			<% end %>
+			<% if logged_in?(:site_admin) %>
+			<div>
+			<%= link_to 'Edit Portfolio', edit_portfolio_path(@portfolio_item.id), class: 'btn btn-warning' %>
+			</div>
+			<% end %>
 		</div>
 	</div>
 </div>
+
