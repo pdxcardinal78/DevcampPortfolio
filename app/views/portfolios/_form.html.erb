@@ -1,4 +1,9 @@
 <%= form_for(@portfolio_item) do |f| %>
+<% if @portfolio_item.errors.any? %>
+   <% @portfolio_item.errors.full_messages.each do |error| %>
+   <%= js add_gritter(error, title: "Ryan Johnson Portfolio") %>
+   <% end %>
+<% end %>
 <div class= "container">
   <div class = "row">
       <div class = "col-md-6">
@@ -33,13 +38,13 @@
         <hr>
       <div class = "col-md-12">
         <h1>Technologies Used</h1>
-    
+
         <%= f.fields_for :technologies do |technology_form| %>
         <%= render 'technology_fields', f: technology_form %>
         <% end %>
         <div>
         <%= link_to_add_association 'Add Technology', f,  :technologies %>
-        </div> 
+        </div>
       </div>
 
       <div class="form-group">
