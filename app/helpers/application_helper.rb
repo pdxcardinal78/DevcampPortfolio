@@ -14,7 +14,7 @@ module ApplicationHelper
 	def source_helper
 		if session[:source]
     	content_tag(:p, greeting, class: "source-greeting")
-    	end
+    end
 	end
 
 	def nav_items
@@ -30,6 +30,10 @@ module ApplicationHelper
 			{
 				url: contact_path,
 				title: 'Contact'
+			},
+			{
+				url: tech_news_path,
+				title: 'Tech News'
 			},
 			{
 				url: blogs_path,
