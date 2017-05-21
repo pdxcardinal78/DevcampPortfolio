@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -8,6 +9,8 @@
     <%= csrf_meta_tags %>
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -18,15 +21,20 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
 
-          <%= video_tag(
-            'HardDrivePhotojpeg.mp4',
-            id: 'background',
-            autoplay: true,
-            loop: true,
-            muted: true,
-            poster: 'home_bg.png'
-            )
+          <%= image_tag 'home_bg.png', id: 'background' %>
+
+          <!--  Blocking Out Video tag for later use
+            <%= video_tag(
+              'HardDrivePhotojpeg.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'home_bg.png'
+              )
             %>
+          End of Blocking for Video Tag-->
+
 
           <%= render "shared/application_nav" %>
 

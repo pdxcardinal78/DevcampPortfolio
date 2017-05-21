@@ -1,5 +1,13 @@
 module ApplicationHelper
 
+	def markdown text
+		markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+	    no_intra_emphasis: true,
+	    fenced_code_blocks: true,
+	    disable_indented_code_blocks: true)
+	return markdown.render(text).html_safe
+	end
+
 	def login_helper style = ''
 		if current_user.is_a?(GuestUser)
 		    (link_to "Register", new_user_registration_path, class: style) + ' ' +
@@ -14,7 +22,7 @@ module ApplicationHelper
 	def source_helper
 		if session[:source]
     	content_tag(:p, greeting, class: "source-greeting")
-    end
+		end
 	end
 
 	def nav_items
@@ -72,11 +80,5 @@ module ApplicationHelper
 	def alert_generator msg
 		js add_gritter(msg, title: "Ryan Johnson Portfolio")
 	end
-
-
-
-
-
-
 
 end

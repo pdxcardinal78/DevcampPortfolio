@@ -7,6 +7,7 @@
  */
 
 /* Links */
+
 a,
 a:focus,
 a:hover {
@@ -54,6 +55,7 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  padding: 2rem;
 }
 
 /* Padding for spacing */
@@ -223,6 +225,28 @@ body {
 
 .technews > .card {
   padding: 20px;
+}
+
+.about-me{
+  font-family: 'Tangerine', cursive;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.about-me-text{
+  font-size: 20px;
+  margin-left: -5px;
+}
+
+.contact-card {
+  color: black;
+  height: 32rem;
+  top: 10px;
+
+}
+
+.contact-card a{
+  color: blue;
 }
 
 
