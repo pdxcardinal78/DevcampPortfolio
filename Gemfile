@@ -47,3 +47,5 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
 gem 'gretel', '~> 3.0', '>= 3.0.9'
 
+ruby '2.4.0'
+

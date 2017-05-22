@@ -3,13 +3,23 @@
       <h4>About</h4>
       <p>Hey welcome to my blog page. Here is where I spend my time writting on things that interest me. I never know what I am going to post next so keep visiting often.</p>
     </div>
-    
+
+    <div class= "sidebar-module sidebar-module-inset">
+      <h4>Topics</h4>
+      <% @side_bar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+      <% end %>
+    </div>
+
+
+
     <div class="sidebar-module">
       <h4>Elsewhere</h4>
       <ol class="list-unstyled social-links">
         <li><a href="https://www.github.com/pdxcardinal78"><%= fa_icon "github" %></a></li>
         <li><a href="https://www.instagram.com/pdxcardinal78"><%= fa_icon "instagram" %></a></li>
         <li><a href="http://www.facebook.com/PDXCardinal78"><%= fa_icon "facebook" %></a></li>
+        <li><a href="http://www.twitter.com/abelethan"><%= fa_icon "twitter" %></a></li>
       </ol>
     </div>
 </div>

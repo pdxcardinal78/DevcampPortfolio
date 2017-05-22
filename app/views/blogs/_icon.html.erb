@@ -1,0 +1,13 @@
+<% if logged_in?(:site_admin) %>
+    <p class="blog-post-meta">
+
+      <% if blog.draft? %>
+        <%= link_to fa_icon("toggle-off"), toggle_status_blog_path(blog) %>
+      <% else %>
+        <%= link_to fa_icon("toggle-on"), toggle_status_blog_path(blog) %>
+      <% end %>
+      /
+      <%= link_to fa_icon("pencil"), edit_blog_path(blog) %> /
+      <%= link_to fa_icon("trash"), blog, method: :delete, data: { confirm: 'Are you sure' } %>
+    </p>
+    <% end %>
