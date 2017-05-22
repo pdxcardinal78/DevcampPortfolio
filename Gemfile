@@ -45,4 +45,5 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
 gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
+gem 'gretel', '~> 3.0', '>= 3.0.9'
 
